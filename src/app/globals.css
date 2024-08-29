@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.drawer-side::-webkit-scrollbar {
+  display: none;
+}
