@@ -1,20 +1,26 @@
+import { MapPin, Search } from "lucide-react";
 import React from "react";
 
 function Navbar() {
   return (
     <div
       className="h-20 w-screen flex flex-row
-     justify-between items-center px-8"
+     justify-between items-center px-8 backdrop-blur-sm bg-transparent/10 shadow-lg "
     >
-      <div className="">JOBIFY</div>
-      <div className=" flex justify-center items-center">
-        <div className="">
-          <input type="text" placeholder="Search Jobs..." className="p-2" />
+      <div className="font-mono font-extrabold text-2xl tracking-widest">JOBIFY</div>
+      <div className=" flex items-center bg-transparent  justify-between gap-2 border-white rounded-lg border-b-2 p-2 ">
+        <div className="flex">
+          <div className="flex items-center">
+          <Search size={16} strokeWidth={1.5} />
+            <input type="search" placeholder="Search Jobs..." className="p-2  placeholder:text-gray-300 placeholder:font-light placeholder:text-sm bg-transparent rounded-md focus:outline-none focus:border-blue-400  focus:border-b-[3px] border-b-[3px]  border-transparent  rounded-r-none after:" />
+          </div>
+          <div className="flex items-center">
+          <MapPin size={16} strokeWidth={1.5} />
+            <input type="search" placeholder="Location" className="p-2  placeholder:text-gray-300 placeholder:font-light placeholder:text-sm bg-transparent  rounded-md focus:outline-none focus:border-blue-400  focus:border-b-[3px] border-b-[3px]  border-transparent  rounded-l-none " />
+          </div>
         </div>
-        <div className="">
-          <input type="text" placeholder="Location" className="p-2" />
-        </div>
-       <button className="btn btn-primary">Find</button>
+
+        <button className="bg-blue-600 p-2 text-sm rounded-lg hover:bg-blue-700 transition-all duration-300 ease-in-out">Find jobs</button>
       </div>
       <div className="">
         <div className="drawer ">
