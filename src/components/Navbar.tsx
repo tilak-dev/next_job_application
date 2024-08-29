@@ -6,8 +6,16 @@ function Navbar() {
       className="h-20 w-screen flex flex-row
      justify-between items-center px-8"
     >
-      <div className="">1</div>
-      <div className="">2</div>
+      <div className="">JOBIFY</div>
+      <div className=" flex justify-center items-center">
+        <div className="">
+          <input type="text" placeholder="Search Jobs..." className="p-2" />
+        </div>
+        <div className="">
+          <input type="text" placeholder="Location" className="p-2" />
+        </div>
+       <button className="btn btn-primary">Find</button>
+      </div>
       <div className="">
         <div className="drawer ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle" />
