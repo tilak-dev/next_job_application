@@ -1,5 +1,14 @@
 import Card from "@/components/Card";
 
+import { Search, FileText, BookOpen, Users } from 'lucide-react'; // Import Lucide icons
+
+const icons = {
+  "<Search />": <Search />,
+  "<FileText />": <FileText />,
+  "<BookOpen />": <BookOpen />,
+  "<Users />": <Users />
+};
+
 export default function Home() {
   return (
     <main className=" bg-cyan-950 min-h-screen flex flex-col justify-center items-center">
@@ -13,13 +22,12 @@ export default function Home() {
           opportunities tailored to your skills and aspirations.
         </p>
         <div className="h-8">
-          <button className="bg-blue-600 py-1 px-3 hover:bg-blue-800 transition-all ease-in-out duration-300 hover:px-[14px] hover:py-[6px] hover:text-sm text-xs rounded-2xl">
+          <button className=" py-1 px-3 bg-[#5046e6] hover:bg-blue-800 transition-all ease-in-out duration-300 hover:px-[14px] hover:py-[6px] hover:text-sm text-xs rounded-2xl">
             Explore Jobs
           </button>
         </div>
       </div>
       <div className="">
-        {/* <Card/> */}
       </div>
     </main>
   );
