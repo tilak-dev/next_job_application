@@ -4,7 +4,7 @@ import React from "react";
 
 function JobCard() {
   return (
-    <div className="p-3">
+    <div className="p-3 mb-6">
       <div className=" bg-black shadow-lg p-6 flex flex-col gap-3 rounded-xl">
       <div className="flex justify-between items-center">
         <p className="font-semibold text-lg text-ellipsis flex gap-1 items-center"><Building2 size={16} strokeWidth={1.25} absoluteStrokeWidth />

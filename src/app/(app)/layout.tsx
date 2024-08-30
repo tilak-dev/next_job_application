@@ -8,10 +8,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-cyan-950 h-screen overflow-x-hidden">
+    <div className="bg-cyan-950 min-h-screen relative overflow-x-hidden">
       <Navbar />
       {children}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
