@@ -1,9 +1,9 @@
-import { Search } from "lucide-react";
+
 import React from "react";
 interface CardData {
   title: string;
   description: string;
-  icon: string;
+  icon: JSX.Element;
 }
 
 
