@@ -10,9 +10,9 @@ interface CardData {
 function Card({title,description,icon}:CardData) {//+
 
   return (
-    <div className="  ">
-      <div className="p-5 md:p-6 text-white  text-center bg-slate-900/40 rounded-lg mt-5">
-      <div className="flex flex-col justify-center items-center">
+    <div className="flex justify-center items-center p-2">
+      <div className="p-5 md:px-7 text-white text-center bg-slate-900/40 rounded-lg mt-2 md:mt-5">
+      <div className="flex flex-col justify-center items-center gap-2">
         <div className="">
         {icon}
         </div>
