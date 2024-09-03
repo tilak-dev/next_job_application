@@ -11,7 +11,7 @@ const icons: { [key: string]: JSX.Element } = {
 
 export default function Home() {
   return (
-    <main className=" bg-cyan-950 relative min-h-screen flex flex-col ">
+    <main className=" bg-cyan-950 relative min-h-screen flex flex-col">
       <div className="flex flex-col justify-center items-center py-20">
         <div className=" flex flex-col lg:gap-7 justify-center items-center w-2/3">
           <h1 className="lg:text-6xl font-bold">Jobify</h1>
@@ -28,7 +28,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-max">
           {data.map((card) => (
             <Card
               icon={icons[card.icon]}

@@ -11,7 +11,10 @@ export default function RootLayout({
     <div className="bg-cyan-950 min-h-screen relative overflow-x-hidden">
       <Navbar />
       {children}
-      <Footer />
+      <div className="h-14">
+        <Footer />
+      </div>
+      
     </div>
   );
 }

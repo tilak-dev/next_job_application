@@ -10,17 +10,20 @@ interface CardData {
 function Card({title,description,icon}:CardData) {//+
 
   return (
-    <div className=" text-white w-60 p-5 bg-slate-900/40 rounded-lg mt-5">
+    <div className="  ">
+      <div className="p-5 md:p-6 text-white  text-center bg-slate-900/40 rounded-lg mt-5">
       <div className="flex flex-col justify-center items-center">
         <div className="">
         {icon}
         </div>
-        <h2 className="text-lg font-semibold text-purple-400">{title}</h2>
-        <p className="text-center text-sm text-gray-500">
+        <h2 className="text-lg md:text-xl font-semibold text-purple-400">{title}</h2>
+        <p className="text-center text-sm md:text-[17px] text-gray-500">
           {description}
         </p>
       </div>
     </div>
+    </div>
+    
   );
 }
 

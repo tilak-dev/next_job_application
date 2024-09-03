@@ -8,7 +8,7 @@ function Navbar() {
      justify-between items-center px-8 backdrop-blur-sm bg-transparent/10 shadow-lg "
     >
       <div className="font-mono font-extrabold text-2xl tracking-widest">JOBIFY</div>
-      <div className=" flex items-center bg-transparent  justify-between gap-2 border-white rounded-lg border-b-2 p-2 ">
+      <div className=" items-center bg-transparent  justify-between gap-2 border-white rounded-lg border-b-2 p-2 hidden md:flex ">
         <div className="flex">
           <div className="flex items-center">
           <Search size={16} strokeWidth={1.5} />

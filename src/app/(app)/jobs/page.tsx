@@ -5,14 +5,14 @@ import { jobData } from "@/data";
 
 export default function page() {
   return (
-    <div className="text-white h-full px-3">
+    <div className="text-white px-3">
       <div className="flex justify-between py-8 px-5 items-center">
-        <h1 className="lg:text-4xl font-bold ">
+        <h1 className="lg:text-4xl text-xl font-bold ">
           Discover Your Next Remote Opportunity
         </h1>
-        <div className="text-sm text-gray-400">203 jobs found</div>
+        <div className="text-xs md:text-sm text-gray-400">203 jobs found</div>
       </div>
-      <div className="grid grid-cols-3">
+      <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3  ">
         {jobData.map((job) => (
           <JobCard
             key={job.key}
