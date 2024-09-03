@@ -1,7 +1,23 @@
 "use client";
 import JobCard from "@/components/JobCard";
-import React from "react";
-import { jobData } from "@/data";
+import React, { useEffect, useState } from "react";
+import Pagination from "@/components/Pagination";
+import jobData from "@/cardData.json";
+import axios from "axios";
+
+interface JobData {
+  data: [
+    {
+      company_name: string;
+      job_title: string;
+      job_type: string;
+      experience_level: string;
+      job_description: string;
+      time_stamp: string;
+      location: string;
+    }
+  ];
+}
 
 export default function page() {
   return (
@@ -25,6 +41,9 @@ export default function page() {
             location={job.location}
           />
         ))}
+      </div>
+      <div className="">
+        <Pagination data={jobData} />
       </div>
     </div>
   );

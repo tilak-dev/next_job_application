@@ -1,11 +1,22 @@
 "use client";
 import React, { useState } from "react";
 
-interface DATA {
-  data: [];
+//interfaces
+interface JobData {
+  company_name: string;
+  job_title: string;
+  job_type: string;
+  experience_level: string;
+  job_description: string;
+  time_stamp: string;
+  location: string;
 }
 
-function Pagination({ data }: DATA) {
+interface dataType {
+  data: JobData[];
+}
+
+function Pagination({ data }: dataType) {
   const [currectPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
   //calculate total number of pages
