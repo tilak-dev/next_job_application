@@ -4,7 +4,7 @@ import JobCard from "@/components/JobCard";
 import jobData from "@/cardData.json";
 import { useRouter } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const handleOnChangePage = (id: number) => {
     router.push(`/jobs/${id}`);
