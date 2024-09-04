@@ -1,13 +1,19 @@
-import { MapPin, Search } from "lucide-react";
-import React from "react";
+import { CircleX, Logs, MapPin, Search } from "lucide-react";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 
 function Navbar() {
+  const  [open,setOpen] = useState(false)
+  const router  = useRouter()
+  const handleOnHome =()=>{
+    router.push('/')
+  }
   return (
     <div
       className="h-20 w-screen flex flex-row
      justify-between items-center px-8 backdrop-blur-sm bg-transparent/10 shadow-lg "
     >
-      <div className="font-mono font-extrabold text-2xl tracking-widest">JOBIFY</div>
+      <div className="font-mono font-extrabold text-2xl tracking-widest cursor-pointer" onClick={handleOnHome}>JOBIFY</div>
       <div className=" items-center bg-transparent  justify-between gap-2 border-white rounded-lg border-b-2 p-2 hidden md:flex ">
         <div className="flex">
           <div className="flex items-center">
@@ -27,8 +33,8 @@ function Navbar() {
           <input id="my-drawer" type="checkbox" className=" drawer-toggle" />
           <div className="drawer-content ">
             {/* Page content here */}
-            <label htmlFor="my-drawer" className="btn btn-primary ">
-              X
+            <label htmlFor="my-drawer" className="btn rounded-3xl btn-ghost ">
+            <Logs size={28} />
             </label>
           </div>
           <div className=" drawer-side">

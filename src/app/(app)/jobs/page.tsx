@@ -1,25 +1,14 @@
 "use client";
 import JobCard from "@/components/JobCard";
-import React, { useEffect, useState } from "react";
-import Pagination from "@/components/Pagination";
+// import Pagination from "@/components/Pagination";
 import jobData from "@/cardData.json";
-import axios from "axios";
-
-interface JobData {
-  data: [
-    {
-      company_name: string;
-      job_title: string;
-      job_type: string;
-      experience_level: string;
-      job_description: string;
-      time_stamp: string;
-      location: string;
-    }
-  ];
-}
+import { useRouter } from "next/navigation";
 
 export default function page() {
+  const router = useRouter();
+  const handleOnChangePage = (id: number) => {
+    router.push(`/jobs/${id}`);
+  };
   return (
     <div className="text-white px-3">
       <div className="flex justify-between py-8 px-5 items-center">
@@ -30,21 +19,23 @@ export default function page() {
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3  ">
         {jobData.map((job) => (
-          <JobCard
-            key={job.key}
-            time_stamp={job.time_stamp}
-            company_name={job.company_name}
-            job_description={job.job_description}
-            experience_level={job.experience_level}
-            job_title={job.job_title}
-            job_type={job.job_type}
-            location={job.location}
-          />
+          <div key={job.key} onClick={() => handleOnChangePage(job.key)}>
+            <JobCard
+              
+              time_stamp={job.time_stamp}
+              company_name={job.company_name}
+              job_description={job.job_description}
+              experience_level={job.experience_level}
+              job_title={job.job_title}
+              job_type={job.job_type}
+              location={job.location}
+            />
+          </div>
         ))}
       </div>
-      <div className="">
+      {/* <div className="">
         <Pagination data={jobData} />
-      </div>
+      </div> */}
     </div>
   );
 }

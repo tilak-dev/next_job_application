@@ -1,7 +1,9 @@
+"use client"
 import { FileText, BookOpen, Users } from "lucide-react"; // Import Lucide icons
 import { data } from "@/data";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 
 const icons: { [key: string]: JSX.Element } = {
   "<FileText />": <FileText  />,
@@ -10,6 +12,10 @@ const icons: { [key: string]: JSX.Element } = {
 };
 
 export default function Home() {
+  const router = useRouter()
+  const handleOnJobs =()=>{
+    router.push('/jobs')
+  }
   return (
     <main className=" bg-cyan-950 relative min-h-screen flex flex-col ">
       <div className="flex flex-col justify-center items-center py-20 px-10">
@@ -23,7 +29,7 @@ export default function Home() {
             opportunities tailored to your skills and aspirations.
           </p>
           <div className="h-8">
-            <button className=" py-2.5 px-3.5 bg-[#5046e6] hover:bg-blue-800 transition-all ease-in-out duration-300 hover:px-4 hover:py-3 hover:text-sm text-xs rounded-2xl hover:rounded-3xl">
+            <button className=" hover:bg-[#5046e6] border-[#5046e6] border-[2px] transition-all ease-in-out duration-300 px-4 py-3 hover:text-sm text-xs rounded-3xl hover:rounded-3xl" onClick={handleOnJobs}>
               Explore Jobs
             </button>
           </div>
